@@ -1,5 +1,6 @@
 // Student student1 = new Student("Garrett Winslow", 300149981);
 // Student student2 = new Student("Ming Gao", 300290294);
+// Purpose: main program, runs the search
 
 // TODO rewrite with a proper ui and so it doesn't just run from cmdline
 
