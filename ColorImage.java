@@ -34,6 +34,9 @@ public class ColorImage {
 
 	// reduces the bit depth of the image to d
 	public void reduceColor(int d) {
+		if (d > depth) {
+			throw new IllegalArgumentException();
+		}
 		int reduction = depth - d;
 		for (int[][] i : image) {
 			for (int[] j : i) {
