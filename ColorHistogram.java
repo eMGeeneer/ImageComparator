@@ -1,6 +1,6 @@
 // Student student1 = new Student("Garrett Winslow", 300149981);
 // Student student2 = new Student("Ming Gao", 300290294);
-// Stores the colours of an image as a histogram to compare with other images
+// Purpse: stores the colours of an image as a histogram to compare with other images
 
 import java.io.BufferedReader;
 import java.io.FileReader;
