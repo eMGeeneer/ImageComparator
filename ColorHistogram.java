@@ -43,6 +43,8 @@ public class ColorHistogram {
 		for (int i = 0; i < image.getWidth(); i++) {
 			for (int j = 0; j < image.getHeight(); j++) {
 				int[] colour = image.getPixel(i, j);
+				// convert the rgb value into a single integer RGB with base depth
+				// then increment that bucket by 1
 				histogram[colour[0] * (1 << 2 * depth) + colour[1] * (1 << depth) + colour[2]] += 1;
 			}
 		}
@@ -88,7 +90,10 @@ public class ColorHistogram {
 		}
 		return result / (double) (pixelCount * hist.pixelCount);
 	}
-	
+
+	//TODO make the files nicer to read
+
+	// saves the histogram to a text file
 	public void save(String filename) throws IOException {
 		if (!filename.matches("(?i).*\\.txt$")) {
 			filename += ".txt";
