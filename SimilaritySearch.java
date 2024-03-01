@@ -1,6 +1,8 @@
 // Student student1 = new Student("Garrett Winslow", 300149981);
 // Student student2 = new Student("Ming Gao", 300290294);
 
+// TODO rewrite with a proper ui and so it doesn't just run from cmdline
+
 import java.io.File;
 import java.io.IOException;
 import java.util.PriorityQueue;
