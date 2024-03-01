@@ -11,7 +11,10 @@ public class HistWrapper implements Comparable<HistWrapper> {
 		sim = n;
 		filename = s;
 	}
-	
+
+	// Compares two HistWrappers
+	// @returns 1 if this has a higher similarity to the query image than the other HistWrapper,
+	// -1 if this has a lower similarity, and 0 if they are the same
 	public int compareTo(HistWrapper h) {
 		if (sim > h.sim) {
 			return 1;
