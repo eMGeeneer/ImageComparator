@@ -1,5 +1,6 @@
 // Student student1 = new Student("Garrett Winslow", 300149981);
 // Student student2 = new Student("Ming Gao", 300290294);
+// A wrapper to make the histograms of images easier to compare
 
 public class HistWrapper implements Comparable<HistWrapper> {
 		
