@@ -34,7 +34,8 @@ public class ColorHistogram {
 		}
 		saveFile.close();
 	}
-	
+
+	// sets the image of the histogram
 	public void setImage(ColorImage image) {
 		image.reduceColor(depth);
 		pixelCount = image.getHeight() * image.getWidth();
@@ -59,8 +60,12 @@ public class ColorHistogram {
 	public int getDepth() {
 		return depth;
 	}
-	
-	public double compare(ColorHistogram hist) {
+
+	// returns a double value between 0 and 1 with 0 being an image with none of the same colours and 
+	// 1 being an image with all the same colours in the same proportions
+	// @returns the similarity of two images by their histogram
+	public double compare(ColorHistogram hist) { /* the compare function cross multiplies the values in each color bucket to keep them as integers for as long as possible
+							to reduce floating point errors */
 		long result = 0;
 		if (depth == hist.depth) {
 			for (int i = 0; i < histogram.length; i++) {
