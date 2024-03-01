@@ -1,5 +1,6 @@
 // Student student1 = new Student("Garrett Winslow", 300149981);
 // Student student2 = new Student("Ming Gao", 300290294);
+// Purpose: to store an image into a 3d array where each x and y index accesses the corresponding pixel's RGB as 3 integers
 
 import java.awt.image.BufferedImage;
 import java.io.File;
