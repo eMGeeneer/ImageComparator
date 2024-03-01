@@ -2,11 +2,8 @@
 // Student student2 = new Student("Ming Gao", 300290294);
 
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 import javax.imageio.ImageIO;
 
@@ -16,7 +13,7 @@ public class ColorImage {
 	private int[][][] image;
 	
 	public ColorImage(String filename) throws IOException {
-		if (filename.matches("(?i).*\\.(jpg|jpeg)$")) {
+		if (filename.matches("(?i).*\\.(jpg|jpeg)$")) { // regex to check if the extension is a JPEG image
 			depth = 8;
 			File file = new File(filename);
 			BufferedImage img = ImageIO.read(file);
@@ -25,7 +22,7 @@ public class ColorImage {
 			height = image[0].length;
 			for (int x = 0; x < img.getWidth(); x++) {
 				for (int y = 0; y < img.getHeight(); y++) {
-					int rgb = img.getRGB(x, y);
+					int rgb = img.getRGB(x, y); // convert the rgb value to three distinct integers R, G, and B
 					image[x][y] = new int[]{(rgb & 0xFF0000) >> 2 * depth, (rgb & 0xFF00) >> depth, rgb & 0xFF};
 				}
 			}
@@ -34,7 +31,8 @@ public class ColorImage {
 			throw new IOException("Invalid file type. Only .jpg and .jpeg extensions are accepted.");
 		}
 	}
-	
+
+	// reduces the bit depth of the image to d
 	public void reduceColor(int d) {
 		int reduction = depth - d;
 		for (int[][] i : image) {
