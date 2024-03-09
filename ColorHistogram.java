@@ -1,5 +1,3 @@
-// Student student1 = new Student("Garrett Winslow", 300149981);
-// Student student2 = new Student("Ming Gao", 300290294);
 // Purpose: stores the colours of an image as a histogram to compare with other images
 
 import java.io.BufferedReader;
